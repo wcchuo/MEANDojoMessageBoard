@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title>The Dojo Message Board</title>
+        <link href='style.css' type="text/css" rel="stylesheet" />
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/blitzer/jquery-ui.css" type="text/css" />
+        <script src="http://static.projectshadowlight.org/jquery-easy-confirm-dialog/jquery.easy-confirm-dialog.min.js"></script>
+        <script>
+            $(document).ready(function (){
+                $(".confirm").easyconfirm();
+            })
+
+        </script>
+    </head>
+    <body>
+         <div class="container">
+             <table>
+                <tr>
+                    <td><h1>The Dojo Message Board</h1></td>
+                    <td>
+                    </td>
+                </tr>
+            </table>
+
+            <form action='/post_message' method='post'>
+                <label>Name: </label>
+                <input type='text' name='name' placeholder='Name'></br>
+                <label>Message: </label>
+                <textarea name='message' placeholder='Your message' rows='4'></textarea></br>
+                <table>
+                    <tr>
+                        <td>
+                        </td>
+                        <td>
+                            <input type='submit' value='Post Message' id='submit' class='button pull-right'>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+
+             <% for (var i in posts) { %>
+                <div class='container single-view'>
+                        Name: <span class='show'><%= posts[i].name %></span></br> 
+                        Message: <span class='show'><%= posts[i].message %></span></br> 
+
+                        Created: <span class='show'><%= posts[i].created_at %></span></br> 
+
+                        Comments: <span class='show'><%= posts[i].comment %></span></br> 
+
+                        <form action='/post/<%= posts[i]._id %>' method='put'>
+                            <label>Name: </label>
+                            <input type='text' name='name' placeholder='Name'></br>
+                            <label>Comment: </label>
+                            <textarea name='comment' placeholder='Your comment' rows='4'></textarea></br>
+                            <input type='hidden' value='<%= posts[i]._id %>' name='mid'>
+                            <table>
+                                <tr>
+                                    <td>
+                                    </td>
+                                    <td>
+                                        <input type='submit' value='Post Comment' id='submit' class='button pull-right'>
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
+
+                </div>
+             <% } %>
+            <div class='text-center small-text'>Wei Chung Chuo. 2015 @ Coding Dojo</div>
+        </div>
+    </body>
+</html>

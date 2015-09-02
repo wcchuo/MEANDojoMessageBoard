@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title>Cat Kingdom</title>
+        <link href='style.css' type="text/css" rel="stylesheet" />
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function (){
+                $('input#submit').click(function (){
+                    var getDateTime = new Date(); 
+                    $('#datetime').val(getDateTime);
+                    console.log(getDateTime);
+                });
+            })
+       </script>
+    </head>
+
+    <body>
+        <div class="container single-view">
+            <table>
+                <tr>
+                    <td><h1>Add a New Cat</h1></td>
+                    <td>
+                        <a href='/' class='button new'>Back</a>
+                    </td>
+                </tr>
+            </table>
+            <form action='/add' method='post'>
+            
+                <label>Genetic Classification: </label>
+                <input type='text' name='genetic_classification' placeholder='Genetic Classification'></br>
+                
+                <label>Lineage: </label>
+                <input type='text' name='lineage' placeholder='Lineage'></br>
+                
+                <label>Subfamily: </label>
+                <input type='text' name='subfamily' placeholder='Subfamily'></br>
+                
+                <label>Genus: </label>
+                <input type='text' name='genus' placeholder='Genus'></br>
+                
+                <label>Scientific Name: </label>
+                <input type='text' name='scientific_name' placeholder='Scientific Name'></br>
+                
+                <label>Name: </label>
+                <input type='text' name='name' placeholder='Name'></br>
+                
+                <label>Description: </label>
+                <textarea name='description' placeholder='Description' rows='10'></textarea></br>
+                
+                <label>Photo URL: </label>
+                <input type='text' name='photo' placeholder='Photo URL'></br>
+                
+                <label>Comment: </label>
+                <textarea name='description' placeholder='Comment' rows='3'></textarea></br>
+                
+                <input type='hidden' value='' id='datetime' name='datetime'>
+                
+                <table>
+                    <tr>
+                        <td>
+                            <a href='/' class='button pull-right'>Cancel</a>
+                        </td>
+                        <td>
+                            <input type='submit' value='Submit' id='submit' class='button pull-right'>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            <div class='text-center small-text'>Wei Chung Chuo. 2015 @ Coding Dojo</div>
+        </div>
+
+    </body>
+</html>

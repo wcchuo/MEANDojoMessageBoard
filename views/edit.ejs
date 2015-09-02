@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>Cat Kingdom : <%= cats.name %></title>
+        <link href='http://localhost:8007/style.css' type="text/css" rel="stylesheet" />
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script>
+
+        </script>
+    </head>
+    <body>
+
+        <div class="container single-view edit-view">
+            <table>
+                <tr>
+                    <td><h1>Edit Cat : <%= cats.name %></h1></td>
+                    <td>
+                        <a href='/' class='button new'>Back</a>
+                    </td>
+                </tr>
+            </table>
+            <form action='/edit/<%= cats._id %>' method='post'>
+            
+                <label>Genetic Classification: </label>
+                <input type='text' name='genetic_classification' placeholder='Genetic Classification' value='<%= cats.genetic_classification %>'></br>
+                
+                <label>Lineage: </label>
+                <input type='text' name='lineage' placeholder='Lineage' value='<%= cats.lineage %>' /></br>
+                
+                <label>Subfamily: </label>
+                <input type='text' name='subfamily' placeholder='Subfamily' value='<%= cats.subfamily %>' /></br>
+                
+                <label>Genus: </label>
+                <input type='text' name='genus' placeholder='Genus' value='<%= cats.genus %>' /></br>
+                
+                <label>Scientific Name: </label>
+                <input type='text' name='scientific_name' placeholder='Scientific Name' value='<%= cats.scientific_name %>' /></br>
+                
+                <label>Name: </label>
+                <input type='text' name='name' placeholder='Name' value='<%= cats.name %>' /></br>
+                
+                <label>Description: </label>
+                <textarea name='description' placeholder='Description' rows='10'><%= cats.description %></textarea></br>
+                
+                <label>Photo URL: </label>
+                <input type='text' name='photo' placeholder='Photo URL' value='<%= cats.photo %>' /></br>
+                
+                <label>Comment: </label>
+                <textarea name='description' placeholder='Comment' rows='3'><%= cats.comment %></textarea></br>
+                
+                <input type='hidden' value='' id='datetime' name='datetime'>
+                
+                <table>
+                    <tr>
+                        <td>
+                            <a href='/' class='button pull-right'>Cancel</a>
+                        </td>
+                        <td>
+                            <input type='submit' value='Submit' id='submit' class='button pull-right'>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            <div class='text-center small-text'>Wei Chung Chuo. 2015 @ Coding Dojo</div>
+        </div>
+
+
+    </body>
+</html>

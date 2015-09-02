@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>The Dojo Message Board</title>
+        <link href='http://localhost:8007/style.css' type="text/css" rel="stylesheet" />
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/blitzer/jquery-ui.css" type="text/css" />
+        <script src="http://static.projectshadowlight.org/jquery-easy-confirm-dialog/jquery.easy-confirm-dialog.min.js"></script>
+        <script>
+            $(document).ready(function (){
+                $(".confirm").easyconfirm();
+            })
+        </script>
+    </head>
+    <body>
+        <div class="container single-view">
+            <table>
+                <tr>
+                    <td><h1>Cat Kingdom : <%= cats.name %></h1></td>
+                    <td>
+                        <a href='/' class='button new'>Back</a>
+                    </td>
+                    <td>
+                        <a href='/<%= cats._id %>/edit' class='button edit'>Edit</a>
+                    </td>
+                    <td>
+                        <a href='/<%= cats._id %>/delete' class='confirm button delete'>Delete</a>
+                    </td>
+                </tr>
+            </table>
+                <img src='<%= cats.photo %>' width='100%' /></br></br> 
+                Genetic Classification: <span class='show'><%= cats.genetic_classification %></span></br> 
+                Lineage: <span class='show'><%= cats.lineage %></span></br> 
+                Subfamily: <span class='show'><%= cats.subfamily %></span></br> 
+                Genus: <span class='show'><%= cats.genus %></span></br> 
+                Scientific: <span class='show'><%= cats.scientific_name %></span></br> 
+                Name: <span class='show'><%= cats.name %></span></br></br> 
+                <%= cats.description %></br> 
+            <div class='text-center small-text'>Wei Chung Chuo. 2015 @ Coding Dojo</div>
+        </div>
+    </body>
+</html>

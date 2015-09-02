@@ -1,0 +1,189 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic);
+
+body {
+	margin: 0 auto;
+	padding: 0;
+	font-size: 14px;
+	font-family: "Lato";
+	font-weight: 300;
+	background-image: url(images/Dark-blue-pieces-abstract-background.jpg);
+  	background-position: center center;
+ 	background-repeat: no-repeat;
+  	background-attachment: fixed;
+ 	background-size: cover;
+ 	background-color:#464646;
+ }
+
+h3 {
+	position: relative;
+	top: -20px;
+	font-size: 22px;
+	font-family: "Lato" !important;
+	font-weight: 700;
+}
+
+.container {
+	margin: 20 auto;
+	min-width: 300px;
+	max-width: 60%;
+	padding: 30px;
+	border: 1px solid silver;
+	border-radius: 8px;
+	background: rgba(232, 232, 232, .5);
+	box-shadow: 1px 1px 8px 0px rgba(0,0,0,0.75); 
+}
+
+.single-view {
+	background: rgba(232, 232, 232, .9) !important;
+	max-width: 100% !important;
+}
+
+.edit-view {
+	max-width: 50% !important;
+}
+
+.small-container {
+	margin: 1.8%;
+	min-width: 100px;
+	min-height: 250px;
+	max-width: 200px;
+	max-height: 250px;
+	padding: 10px;
+	border-radius: 8px;
+	background-color: white;
+	box-shadow: 1px 1px 4px 0px rgba(0,0,0,0.75);
+	display: inline-block;
+	vertical-align: top;
+}
+
+.small-content {
+	height: 228px;
+}
+
+.thumb {
+	border-radius: 5px;
+	max-height: 130px;
+}
+
+input, select, textarea {
+	width: 100%;
+	font-size: 14px;
+	font-family: "Lato";
+	font-weight: 300;
+	line-height: 1.5em;
+	padding: 3px 5px;
+	border-radius: 4px;
+	border: 1px solid silver;
+}
+
+table,tr,td {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	width: 100%;
+}
+
+label {
+	font-size: 14px;
+	font-family: "Lato";
+	font-weight: 700;
+	line-height: 25px;
+}
+
+.button {
+	width: 110px;
+	background-color: #005b96;
+	color: white;
+	margin: 10px 0;
+	padding: 5px 15px;
+	display: inline-block;
+	position: relative;
+	border-radius: 4px;
+	font-size: 14px;
+	font-family: "Lato";
+	font-weight: 300;
+	text-align: center;
+	text-decoration: none;
+	border: 0px;
+}
+
+.button-sm {
+	width: 50px;
+	background-color: #005b96;
+	color: white;
+	margin: 0;
+	padding: 3px 4px;
+	display: inline-block;
+	position: relative;
+	border-radius: 4px;
+	font-size: 12px;
+	font-family: "Lato";
+	font-weight: 300;
+	text-align: center;
+	text-decoration: none;
+	border: 0px;
+}
+
+.new {
+	right: 0px;
+}
+
+.delete {
+	background-color: red;
+	left:7px;
+}
+
+.edit {
+	left:4px;
+	background-color: #4F9C3A;
+}
+
+.action {
+	width: 33%;
+}
+
+.pull-right {
+}
+
+.center {
+	left: 40%;
+}
+
+#response {
+	margin: 20 auto;
+	min-width: 300px;
+	max-width: 500px;
+	padding: 30px;
+	border: 1px solid silver;
+	border-radius: 8px;
+	background-color: #cfcfcf;
+}
+
+.quote {
+	font-size: 20px;
+	font-weight: 700;
+	color: #2A2E54;
+}
+
+.name {
+	font-size: 14px;
+	font-weight: 300;
+	font-style: italic;
+	text-align: right;
+	width: 100%;
+	margin-top: 5px;
+}
+
+.show {
+	font-weight: 700;
+}
+
+.text-center {
+	width: 100%;
+	text-align: center;
+}
+
+.small-text {
+	font-size: 14px;
+	font-weight: 300; 
+}

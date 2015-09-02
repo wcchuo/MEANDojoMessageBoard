@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>The Dojo Message Board</title>
+        <link href='style.css' type="text/css" rel="stylesheet" />
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/blitzer/jquery-ui.css" type="text/css" />
+        <script src="http://static.projectshadowlight.org/jquery-easy-confirm-dialog/jquery.easy-confirm-dialog.min.js"></script>
+        <script>
+            $(document).ready(function (){
+                //$(".confirm").easyconfirm();
+            })
+        </script>
+    </head>
+    <body>
+         <div class="container">
+            <form action='/post_message' method='post'>
+<!--                 <label>Name: </label>
+                <input type='text' name='name' placeholder='Name'></br> -->
+                <label>Message: </label>
+                <textarea name='post' placeholder='Your message' rows='4'></textarea></br>
+                <table>
+                    <tr>
+                        <td>
+                        </td>
+                        <td>
+                            <input type='submit' value='Post Message' id='submit' class='button pull-right'>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+
+      
+
+         </div>
+    </body>
+</html>
